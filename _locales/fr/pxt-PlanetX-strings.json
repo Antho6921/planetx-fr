@@ -243,5 +243,22 @@
     "{id:subcategory}Neopixel": "Neopixel",
     "{id:subcategory}Sensor": "Capteurs",
     "{id:subcategory}ThingSpeak": "ThingSpeak",
-    "{id:subcategory}MQTT": "MQTT"
+    "{id:subcategory}MQTT": "MQTT",
+    "PlanetX_IOT.brokerState|block": "Courtier MQTT connecté %State",
+    "PlanetX_IOT.sendmesMQTT|block": "Envoyer %mes au sujet: $topic=variables_get(topic) avec niveau QoS: %qos",
+    "PlanetX_IOT.subMQTT|block": "S'abonner au sujet: $topic=variables_get(topic) avec niveau QoS: %qos",
+    "PlanetX_IOT.unsubMQTT|block": "Se désabonner du sujet: $topic=variables_get(topic)",
+    "PlanetX_IOT.uploadSmartiot|block": "Charger les données %data vers la plateforme SmartIoT",
+    "PlanetX_IOT.stateList.on|block": "activé",
+    "PlanetX_IOT.stateList.off|block": "désactivé",
+    "{id:subcategory}IFTTT": "IFTTT",
+    "{id:subcategory}SmartIot": "SmartIoT",
+    "PlanetX_Basic.ButtonState.on|block": "activé",
+    "PlanetX_Basic.ButtonState.off|block": "désactivé",
+    "PlanetX_Basic.ButtonEventState.Button_on|block": "activé",
+    "PlanetX_Basic.ButtonEventState.Button_off|block": "désactivé",
+    "PlanetX_Basic.Vibration.Vibration_on|block": "activé",
+    "PlanetX_Basic.Vibration.Vibration_off|block": "désactivé",
+    "PlanetX_IOT.SmartIotSwitchState.on|block": "activé",
+    "PlanetX_IOT.SmartIotSwitchState.off|block": "désactivé"
 }
