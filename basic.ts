@@ -278,9 +278,9 @@ namespace PlanetX_Basic {
     const environment_Addr = 0x26
 
     export enum targetList {
-        //% block="Human body"
+        //% block="Corps humain"
         human_body,
-        //% block="Environment"
+        //% block="Environnement"
         environment
     }
 
@@ -315,13 +315,13 @@ namespace PlanetX_Basic {
     * Play status selection button list
     */
     export enum playType {
-        //% block="Play"
+        //% block="Lecture"
         Play = 0x0D,
-        //% block="Stop"
+        //% block="Arrêt"
         Stop = 0x16,
-        //% block="PlayNext"
+        //% block="Lecture suivante"
         PlayNext = 0x01,
-        //% block="PlayPrevious"
+        //% block="Lecture précédente"
         PlayPrevious = 0x02,
         //% block="Pause"
         Pause = 0x0E
@@ -1144,9 +1144,9 @@ namespace PlanetX_Basic {
         Four = 3
     }
     export enum TrackBit_gray {
-        //% block="line"
+        //% block="ligne"
         One = 0,
-        //% block="background"
+        //% block="fond"
         Two = 4
     }
 
@@ -1155,7 +1155,7 @@ namespace PlanetX_Basic {
         //% block="cm" 
         Distance_Unit_cm,
 
-        //% block="foot"
+        //% block="pied"
         Distance_Unit_foot,
     }
     export enum ButtonStateList {
@@ -1167,76 +1167,76 @@ namespace PlanetX_Basic {
         CD
     }
     export enum RelayStateList {
-        //% block="NC|Close NO|Open"
+        //% block="NC|Fermé NO|Ouvert"
         On,
 
-        //% block="NC|Open NO|Close"
+        //% block="NC|Ouvert NO|Fermé"
         Off
     }
     export enum BME280_state {
-        //% block="temperature(℃)"
+        //% block="température(℃)"
         BME280_temperature_C,
 
-        //% block="humidity(0~100)"
+        //% block="humidité(0~100)"
         BME280_humidity,
 
-        //% block="pressure(hPa)"
+        //% block="pression(hPa)"
         BME280_pressure,
 
         //% block="altitude(M)"
         BME280_altitude,
     }
     export enum DHT11_state {
-        //% block="temperature(℃)" enumval=0
+        //% block="température(℃)" enumval=0
         DHT11_temperature_C,
 
-        //% block="humidity(0~100)" enumval=1
+        //% block="humidité(0~100)" enumval=1
         DHT11_humidity,
     }
     export enum DHT20_state {
-        //% block="temperature(℃)" enumval=0
+        //% block="température(℃)" enumval=0
         DHT20_temperature_C,
 
-        //% block="humidity(0~100)" enumval=1
+        //% block="humidité(0~100)" enumval=1
         DHT20_humidity,
     }
 
     export enum GestureType {
-        //% block="None"
+        //% block="Aucun"
         None = 0,
-        //% block="Right"
+        //% block="Droite"
         Right = 1,
-        //% block="Left"
+        //% block="Gauche"
         Left = 2,
-        //% block="Up"
+        //% block="Haut"
         Up = 3,
-        //% block="Down"
+        //% block="Bas"
         Down = 4,
-        //% block="Forward"
+        //% block="Avant"
         Forward = 5,
-        //% block="Backward"
+        //% block="Arrière"
         Backward = 6,
-        //% block="Clockwise"
+        //% block="Horaire"
         Clockwise = 7,
-        //% block="Anticlockwise"
+        //% block="Antihoraire"
         Anticlockwise = 8,
-        //% block="Wave"
+        //% block="Vague"
         Wave = 9
     }
     export enum ColorList {
-        //% block="Red"
+        //% block="Rouge"
         red,
-        //% block="Green"
+        //% block="Vert"
         green,
-        //% block="Blue"
+        //% block="Bleu"
         blue,
         //% block="Cyan"
         cyan,
         //% block="Magenta"
         magenta,
-        //% block="Yellow"
+        //% block="Jaune"
         yellow,
-        //% block="White"
+        //% block="Blanc"
         white
     }
 
@@ -1245,25 +1245,25 @@ namespace PlanetX_Basic {
         Co,
         //% block="Co2"
         Co2,
-        //% block="Smoke"
+        //% block="Fumée"
         Smoke,
-        //% block="Alcohol"
+        //% block="Alcool"
         Alcohol
     }
     export enum DataUnit {
-        //% block="Year"
+        //% block="Année"
         Year,
-        //% block="Month"
+        //% block="Mois"
         Month,
-        //% block="Day"
+        //% block="Jour"
         Day,
-        //% block="Weekday"
+        //% block="Jour de la semaine"
         Weekday,
-        //% block="Hour"
+        //% block="Heure"
         Hour,
         //% block="Minute"
         Minute,
-        //% block="Second"
+        //% block="Seconde"
         Second
     }
 
@@ -1275,14 +1275,14 @@ namespace PlanetX_Basic {
     }
 
     export enum joykeyEnum {
-        //% block="pressed"
+        //% block="appuyé"
         pressed = 1,
-        //% block="unpressed"
+        //% block="non appuyé"
         unpressed = 0
     }
 
     ///////////////////////////////////blocks/////////////////////////////
-    //% blockId="readnoise" block="Noise sensor %Rjpin loudness(dB)"
+    //% blockId="readnoise" block="Niveau sonore (dB)%Rjpin "
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1391,7 +1391,7 @@ namespace PlanetX_Basic {
         noise = Math.round(noise)
         return Math.round(noise)
     }
-    //% blockId="lightSensor" block="Light sensor %Rjpin light intensity(lux)"
+    //% blockId="lightSensor" block="Intensité lumineuse (lux)%Rjpin"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1414,7 +1414,7 @@ namespace PlanetX_Basic {
         }
         return Math.round(voltage)
     }
-    //% blockId="readsoilmoisture" block="Soil moisture sensor %Rjpin value(0~100)"
+    //% blockId="readsoilmoisture" block="Humidité du sol (0~100)%Rjpin"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1433,7 +1433,7 @@ namespace PlanetX_Basic {
         return Math.round(soilmoisture);
     }
 
-    //% blockId="readwaterLevel" block="Water level sensor %Rjpin value(0~100)"
+    //% blockId="readwaterLevel" block="Niveau d'eau (0~100)%Rjpin"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1455,7 +1455,7 @@ namespace PlanetX_Basic {
         return Math.round(waterlevel)
     }
 
-    //% blockId="readUVLevel" block="UV sensor %Rjpin level(0~15)"
+    //% blockId="readUVLevel" block="Niveau UV (0~15)%Rjpin"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1475,7 +1475,7 @@ namespace PlanetX_Basic {
         );
         return Math.round(UVlevel)
     }
-    //% blockId="gasValue" block="%sensor Gas sensor %Rjpin concentration value"
+    //% blockId="gasValue" block="Valeur concentration en gaz %sensor sur %Rjpin"
     //% Rjpin.fieldEditor="gridpicker" Rjpin.fieldOptions.columns=2
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1488,7 +1488,7 @@ namespace PlanetX_Basic {
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=Crash block="Crash Sensor %Rjpin is pressed"
+    //% blockId=Crash block="Microrupteur %Rjpin est pressé"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor group="Digital" color=#EA5532 
@@ -1506,7 +1506,7 @@ namespace PlanetX_Basic {
 
     let distance_last = 0
 
-    //% blockId=sonarbit block="Ultrasonic sensor %Rjpin distance %distance_unit"
+    //% blockId=sonarbit block="Distance télémètre ultrasons %Rjpin en %distance_unit"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% distance_unit.fieldEditor="gridpicker"
@@ -1572,7 +1572,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId="PIR" block="PIR sensor %Rjpin detects motion"
+    //% blockId="PIR" block="PIR %Rjpin détecte un mouvement"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor group="Digital"  color=#EA5532
@@ -1587,7 +1587,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId="PM25" block="PM2.5 sensor %Rjpin value (μg/m³)"
+    //% blockId="PM25" block="Concentration particules PM2.5 sur %Rjpin (μg/m³)"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor group="Digital" color=#EA5532
@@ -1606,7 +1606,7 @@ namespace PlanetX_Basic {
         return pm25
     }
 
-    //% blockId="readdust" block="Dust sensor %Rjpin value (μg/m³)"
+    //% blockId="readdust" block="Concentration poussières %Rjpin (μg/m³)"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor color=#E2C438 group="Analog"
@@ -1649,7 +1649,7 @@ namespace PlanetX_Basic {
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Sensor group="Digital" color=#EA5532
-    //% blockId=tracking_sensor block="Line-tracking sensor %Rjpin is %state"
+    //% blockId=tracking_sensor block="Etat capteur suivi de ligne %Rjpin = %state"
     export function trackingSensor(Rjpin: DigitalRJPin, state: TrackingStateType): boolean {
         let lpin = DigitalPin.P1
         let rpin = DigitalPin.P2
@@ -1691,7 +1691,7 @@ namespace PlanetX_Basic {
     */
     //% channel.fieldEditor="gridpicker" channel.fieldOptions.columns=4
     //% subcategory=Sensor group="IIC Port"
-    //% block="Trackbit channel %channel gray value"
+    //% block="Niveau de gris suiveur de ligne quadruple canal %channel"
     export function TrackbitgetGray(channel: TrackbitChannel): number {
         pins.i2cWriteNumber(0x1a, channel, NumberFormat.Int8LE)
         return pins.i2cReadNumber(0x1a, NumberFormat.UInt8LE, false)
@@ -1699,14 +1699,14 @@ namespace PlanetX_Basic {
     //% State.fieldEditor="gridpicker"
     //% State.fieldOptions.columns=4
     //% subcategory=Sensor group="IIC Port"
-    //% block="Trackbit is %State"
+    //% block="Etat suiveur de ligne quadruple %State"
     export function TrackbitState(State: TrackbitStateType): boolean {
         return TrackBit_state_value == State
     }
     //% state.fieldEditor="gridpicker" state.fieldOptions.columns=2
     //% channel.fieldEditor="gridpicker" channel.fieldOptions.columns=4
     //% subcategory=Sensor group="IIC Port"
-    //% block="Trackbit channel %channel is %state"
+    //% block="Suiveur de ligne quadruple canal %channel est %state"
     export function TrackbitChannelState(channel: TrackbitChannel, state: TrackbitType): boolean {
         let TempVal: number = 0
         pins.i2cWriteNumber(0x1a, 4, NumberFormat.Int8LE)
@@ -1732,7 +1732,7 @@ namespace PlanetX_Basic {
     //% channel.fieldEditor="gridpicker" channel.fieldOptions.columns=4
     //% detect_target.fieldEditor="gridpicker" detect_target.fieldOptions.columns=2
     //% subcategory=Sensor group="IIC Port"
-    //% block="Trackbit Init_Sensor_Val channel %channel detection target %detect_target value"
+    //% block="Sensibilité détection canal No %channel est %detect_target"
     export function Trackbit_Init_Sensor_Val(channel: TrackbitChannel, detect_target: TrackBit_gray): number {
         let Init_Sensor_Val = pins.createBuffer(8)
         pins.i2cWriteNumber(0x1a, 5, NumberFormat.Int8LE)
@@ -1744,7 +1744,7 @@ namespace PlanetX_Basic {
     //% deprecated=true
     //% val.min=0 val.max=255
     //% subcategory=Sensor group="IIC Port"
-    //% block="Set Trackbit learn fail value %val"
+    //% block="Valeur échec apprentissage capt. ligne quadruple est %val"
     export function Trackbit_learn_fail_value(val: number) {
         pins.i2cWriteNumber(0x1a, 6, NumberFormat.Int8LE)
         pins.i2cWriteNumber(0x1a, val, NumberFormat.Int8LE)
@@ -1755,7 +1755,7 @@ namespace PlanetX_Basic {
     */
     //% sensor_number.fieldEditor="gridpicker" sensor_number.fieldOptions.columns=2
     //% subcategory=Sensor group="IIC Port"
-    //% block="Trackbit sensor offset value"
+    //% block="Valeur offset suiveur de ligne quadruple"
     export function TrackBit_get_offset(): number {
         let offset: number
         pins.i2cWriteNumber(0x1a, 5, NumberFormat.Int8LE)
@@ -1768,7 +1768,7 @@ namespace PlanetX_Basic {
     }
 
     //% subcategory=Sensor group="IIC Port"
-    //% block="Get a Trackbit state value"
+    //% block="Acquérir état suiveur de ligne quadruple"
     export function Trackbit_get_state_value() {
         pins.i2cWriteNumber(0x1a, 4, NumberFormat.Int8LE)
         TrackBit_state_value = pins.i2cReadNumber(0x1a, NumberFormat.UInt8LE, false)
@@ -1790,7 +1790,7 @@ namespace PlanetX_Basic {
         while (input.runningTimeMicros() < time);
     }
 
-    //% blockId="readdht11" block="DHT11 sensor %Rjpin %dht11state value"
+    //% blockId="readdht11" block="Capteur DHT11 sur %Rjpin %dht11state mesurée"
     //% Rjpin.fieldEditor="gridpicker" dht11state.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2 dht11state.fieldOptions.columns=1
     //% subcategory=Sensor group="Digital" color=#EA5532
@@ -1865,7 +1865,7 @@ namespace PlanetX_Basic {
         }
         return 0
     }
-    //% blockID="set_all_data" block="RTC IIC port set %data | %num"
+    //% blockID="set_all_data" block="Initialiser %data | %num RTC port IIC "
     //% subcategory=Sensor group="IIC Port"
     export function setData(data: DataUnit, num: number): void {
         switch (data) {
@@ -1895,7 +1895,7 @@ namespace PlanetX_Basic {
         }
         start();
     }
-    //% blockID="get_one_data" block="RTC IIC port get %data"
+    //% blockID="get_one_data" block="Lire %data RTC port IIC "
     //% subcategory=Sensor group="IIC Port"
     export function readData(data: DataUnit): number {
         switch (data) {
@@ -1925,7 +1925,7 @@ namespace PlanetX_Basic {
 
         }
     }
-    //% block="BME280 sensor IIC port value %state"
+    //% block="Valeur %state BME280 port IIC "
     //% state.fieldEditor="gridpicker" state.fieldOptions.columns=1
     //% subcategory=Sensor  group="IIC Port"
     export function bme280Sensor(state: BME280_state): number {
@@ -2024,7 +2024,7 @@ namespace PlanetX_Basic {
     const gestureEventId = 3100;
     let lastGesture = GestureType.None;
     let paj7620 = new PAJ7620();
-    //% blockId= gesture_create_event block="Gesture sensor IIC port is %gesture"
+    //% blockId= gesture_create_event block="Lorsque geste détecté port IIC %gesture"
     //% gesture.fieldEditor="gridpicker" gesture.fieldOptions.columns=3
     //% subcategory=Sensor group="IIC Port"
     export function onGesture(gesture: GestureType, handler: () => void) {
@@ -2054,7 +2054,7 @@ namespace PlanetX_Basic {
 
     //% deprecated=true
     //% subcategory=Sensor group="IIC Port"
-    //% block="MLX90615 Infra Temp sensor IIC port %target Unit %Unit"
+    //% block="Capteur MLX90615 Temp Infra port IIC %target Unit %Unit"
     export function MLX90615tempe(target: targetList, Unit: UnitList): number {
         let retemp = 0
         switch (target) {
@@ -2075,7 +2075,7 @@ namespace PlanetX_Basic {
         }
         return Math.round(retemp * 100) / 100
     }
-    //% blockId=apds9960_readcolor block="Color sensor IIC port color HUE(0~360)"
+    //% blockId=apds9960_readcolor block="Valeur couleur HUE port IIC (0~360)"
     //% subcategory=Sensor group="IIC Port"
     export function readColor(): number {
         let buf = pins.createBuffer(2)
@@ -2177,7 +2177,7 @@ namespace PlanetX_Basic {
         }
         return hue
     }
-    //% block="Color sensor IIC port detects %color"
+    //% block="Détection couleur %color port IIC"
     //% subcategory=Sensor group="IIC Port"
     //% color.fieldEditor="gridpicker" color.fieldOptions.columns=3
     export function checkColor(color: ColorList): boolean {
@@ -2242,7 +2242,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% block="RFID sensor IIC port read data from card"
+    //% block="Lire données carte module RFID port IIC"
     //% subcategory=Sensor group="IIC Port"
     export function readDataBlock(): string {
         if (NFC_ENABLE === 0) {
@@ -2285,7 +2285,7 @@ namespace PlanetX_Basic {
         }
         return ""
     }
-    //% block="RFID sensor IIC port write %data to card"
+    //% block="Ecrire %data sur carte module RFID port IIC"
     //% subcategory=Sensor group="IIC Port"
     export function writeData(data: string): void {
         if (NFC_ENABLE === 0) {
@@ -2304,7 +2304,7 @@ namespace PlanetX_Basic {
         }
         writeblock(blockData);
     }
-    //% block="RFID sensor IIC port Detect Card"
+    //% block="Détection carte module RFID port IIC"
     //% subcategory=Sensor group="IIC Port"
     export function checkCard(): boolean {
         if (NFC_ENABLE === 0) {
@@ -2336,7 +2336,7 @@ namespace PlanetX_Basic {
     }
 
     //% deprecated=true
-    //% blockId="readdht20" block="DHT20 sensor %dht20state value"
+    //% blockId="readdht20" block="Capteur DHT20 %dht20state valeur"
     //% dht20state.fieldEditor="gridpicker"
     //% dht20state.fieldOptions.columns=1
     //% subcategory=Sensor group="IIC Port"
@@ -2370,7 +2370,7 @@ namespace PlanetX_Basic {
     }
 
     //% deprecated=true
-    //% block="joystick sensor %state value"
+    //% block="Capteur joystick %state valeur"
     //% state.fieldEditor="gridpicker"
     //% state.fieldOptions.columns=2
     //% subcategory=Sensor group="IIC Port"
@@ -2396,7 +2396,7 @@ namespace PlanetX_Basic {
     }
 
     //% deprecated=true
-    //% block="joystick sensor %key key"
+    //% block="Capteur joystick %key touche"
     //% key.fieldEditor="gridpicker"
     //% key.fieldOptions.columns=2
     //% subcategory=Sensor group="IIC Port"
@@ -2406,7 +2406,7 @@ namespace PlanetX_Basic {
         return key == buff[2]
     }
 
-    //% blockId="potentiometer" block="Trimpot %Rjpin analog value"
+    //% blockId="potentiometer" block="Valeur potentiomètre %Rjpin"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Input color=#E2C438 group="Analog"
@@ -2415,7 +2415,7 @@ namespace PlanetX_Basic {
         pin = RJpin_to_analog(Rjpin)
         return pins.analogReadPin(pin)
     }
-    //% blockId=buttonab block="Button %Rjpin %button is pressed"
+    //% blockId=buttonab block="Bouton sur %Rjpin %button appuyé"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% button.fieldEditor="gridpicker"
@@ -2459,9 +2459,9 @@ namespace PlanetX_Basic {
     }
 
     export enum ButtonState {
-        //% block="on"
+        //% block="activé"
         on = 1,
-        //% block="off"
+        //% block="désactivé"
         off = 2
     }
 
@@ -2471,7 +2471,7 @@ namespace PlanetX_Basic {
         CD_unpressed: ButtonState.off
     }
 
-    //% block="on button %Rjpin %button pressed"
+    //% block="Lorsque bouton sur %Rjpin %button est appuyé"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% button.fieldEditor="gridpicker"
@@ -2528,7 +2528,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId=fans block="Motor fan %Rjpin toggle to $fanstate || speed %speed \\%"
+    //% blockId=fans block="Moteur %Rjpin sur $fanstate || vitesse %speed \%"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% fanstate.shadow="toggleOnOff"
@@ -2561,7 +2561,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId=laserSensor block="Laser %Rjpin toggle to $laserstate"
+    //% blockId=laserSensor block="Laser %Rjpin sur $laserstate"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% laserstate.shadow="toggleOnOff"
@@ -2577,7 +2577,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId=magnet block="magnet %Rjpin toggle to $magnetstate"
+    //% blockId=magnet block="Ventouse magnétique %Rjpin sur $magnetstate"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% magnetstate.shadow="toggleOnOff"
@@ -2607,7 +2607,7 @@ namespace PlanetX_Basic {
     }
 
     //% deprecated=true
-    //% blockId=Relay block="Relay %Rjpin toggle to %Relaystate"
+    //% blockId=Relay block="Basculer relais %Rjpin sur %Relaystate"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% Relaystate.fieldEditor="gridpicker"
@@ -2626,7 +2626,7 @@ namespace PlanetX_Basic {
         }
     }
 
-    //% blockId="setLoopFolder" block="loop play all the MP3s in the folder:$folderNum"
+    //% blockId="setLoopFolder" block="Répéter lecture en boucle fichiers MP3 du dossier :$folderNum"
     //% folderNum.defl="01"
     //% subcategory=Execute group="MP3" color=#EA5532
     export function setLoopFolder(folderNum: string): void {
@@ -2641,7 +2641,7 @@ namespace PlanetX_Basic {
     }
 
     //% blockId="folderPlay" 
-    //% block="play the mp3 in the folder:$folderNum filename:$fileNum || repeatList: $myAns"
+    //% block="Lecture fichier mp3 du dossier :$folderNum nom :$fileNum || répéter : $myAns"
     //% folderNum.defl="01" fileNum.defl="001"
     //% myAns.shadow="toggleYesNo"
     //% expandableArgumentMode="toggle"
@@ -2660,7 +2660,7 @@ namespace PlanetX_Basic {
     }
 
     //% blockId="setTracking" 
-    //% block="play the mp3 in order of:%tracking || repeatList: $myAns"
+    //% block="Lecture fichier mp3 :%tracking || répéter : $myAns"
     //% myAns.shadow="toggleYesNo"
     //% tracking.defl=1
     //% expandableArgumentMode="toggle"
@@ -2678,7 +2678,7 @@ namespace PlanetX_Basic {
         if (myAns)
             execute(0x19)
     }
-    //% blockId=MP3execute block="Set MP3 execute procedure:%myType"
+    //% blockId=MP3execute block="Fichier MP3:%myType"
     //% myType.fieldEditor="gridpicker"
     //% myType.fieldOptions.columns=2
     //% subcategory=Execute group="MP3" color=#EA5532
@@ -2692,7 +2692,7 @@ namespace PlanetX_Basic {
         mp3_checkSum()
         mp3_sendData()
     }
-    //% blockId="setVolume" block="Set volume(0~25):%volume"
+    //% blockId="setVolume" block="Mettre volume MP3 à %volume (0~25)"
     //% volume.min=0 volume.max=25
     //% subcategory=Execute group="MP3" color=#EA5532
     export function setVolume(volume: number): void {
@@ -2708,7 +2708,7 @@ namespace PlanetX_Basic {
         mp3_checkSum()
         mp3_sendData()
     }
-    //% blockId=MP3setPort block="Set the MP3 port to %Rjpin"
+    //% blockId=MP3setPort block="Définir MP3 sur %Rjpin"
     //% Rjpin.fieldEditor="gridpicker"
     //% Rjpin.fieldOptions.columns=2
     //% subcategory=Execute group="MP3" color=#EA5532
@@ -3016,12 +3016,12 @@ namespace PlanetX_Basic {
         /**
          * Attention greater than 50
          */
-        //% block="off"
+        //% block="désactivé"
         Button_off = 0,
         /**
          * Attention greater than 50
          */
-        //% block="on"
+        //% block="activé"
         Button_on = 1,
     }
 
@@ -3063,12 +3063,12 @@ namespace PlanetX_Basic {
         /**
          * Attention greater than 50
          */
-        //% block="off"
+        //% block="désactivé"
         Vibration_off = 30,
         /**
          * Attention greater than 50
          */
-        //% block="on"
+        //% block="activé"
         Vibration_on = 29,
     }
 
@@ -3076,7 +3076,7 @@ namespace PlanetX_Basic {
     * Whether a Button is pressed
     */
     //% subcategory=Input group="IIC Port" color=#00B1ED
-    //% block="Joystick button %value_level is pressed" blockId="DigitalButton"
+    //% block="Bouton joystick %value_level est appuyé" blockId="DigitalButton"
     export function get_Attention_Value(level: value_level): boolean {
         let value = 0
         let digital = 0
@@ -3254,7 +3254,7 @@ namespace PlanetX_Basic {
      * Get Analog value
     */
     //% subcategory=Input group="IIC Port" color=#00B1ED
-    //% blockId="AnlogValue" block="Joystick rocker value of %value_A"
+    //% blockId="AnlogValue" block="Position joystick sur %value_A"
     export function GetAnalogValue(Button: value_A): number {
         let Analog = 0
         let re_value = 128
@@ -3309,10 +3309,10 @@ namespace PlanetX_Basic {
     let lastTemp = 0
 
     export enum ValType {
-        //% block="temperature(℃)" enumval=0
+        //% block="température(℃)" enumval=0
         DS18B20_temperature_C,
 
-        //% block="temperature(℉)" enumval=1
+        //% block="température(℉)" enumval=1
         DS18B20_temperature_F
     }
     function init_18b20(mpin: DigitalPin) {
@@ -3355,7 +3355,7 @@ namespace PlanetX_Basic {
     }
 
     //% subcategory=Sensor group="Digital" color=#EA5532
-    //% block="value of DS18B20 %state at pin %Rjpin"
+    //% block="DS18B20 sur %state valeur %Rjpin"
     export function Ds18b20Temp(Rjpin: DigitalRJPin, state: ValType): number {
         let pin = RJpin_to_digital(Rjpin);
         let temperature = celsius(pin);

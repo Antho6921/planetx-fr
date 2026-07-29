@@ -101,7 +101,7 @@ namespace PlanetX_IOT {
     /**
      * Initialize ESP8266 module
      */
-    //% block="set wifi module %Rjpin Baud rate %baudrate"
+    //% block="Module Wi-Fi sur %Rjpin Vitesse (en baud) %baudrate"
     //% ssid.defl=your_ssid
     //% pw.defl=your_password weight=100
     //% color=#EA5532
@@ -136,7 +136,7 @@ namespace PlanetX_IOT {
     /**
      * connect to Wifi router
      */
-    //% block="connect Wifi SSID = %ssid|KEY = %pw"
+    //% block="Connecter au Wi-Fi le SSID = %ssid|Clé = %pw"
     //% ssid.defl=your_ssid
     //% pw.defl=your_pwd weight=95
     //% color=#EA5532
@@ -159,7 +159,7 @@ namespace PlanetX_IOT {
      * Warning: Deprecated.
      * Check if ESP8266 successfully connected to Wifi
      */
-    //% block="Wifi connected %State" weight=70
+    //% block="Wi-Fi connecté %State" weight=70
     //% color=#EA5532
     export function wifiState(state: boolean) {
         return wifi_connected === state
@@ -197,7 +197,7 @@ namespace PlanetX_IOT {
      * Set  MQTT client
      */
     //% subcategory=MQTT weight=30
-    //% blockId=initMQTT block="Set MQTT client config|scheme: %scheme clientID: %clientID username: %username password: %password path: %path"
+    //% blockId=initMQTT block="Configurer le client MQTT|Protocole: %scheme ID client: %clientID Nom utilisateur: %username Mot de passe: %password Chemin: %path"
     //% color=#EA5532
     export function setMQTT(scheme: SchemeList, clientID: string, username: string, password: string, path: string): void {
         sendAT(`AT+MQTTUSERCFG=0,${scheme},"${clientID}","${username}","${password}",0,0,"${path}"`, 1000)
@@ -207,7 +207,7 @@ namespace PlanetX_IOT {
      * Connect to MQTT broker
      */
     //% subcategory=MQTT weight=25
-    //% blockId=connectMQTT block="connect MQTT broker host: %host port: %port reconnect: $reconnect"
+    //% blockId=connectMQTT block="Connecter courtier MQTT hôte: %host port: %port reconnecter: $reconnect"
     //% color=#EA5532
     export function connectMQTT(host: string, port: number, reconnect: boolean): void {
         registerMsgHandler("+MQTTDISCONNECTED", () => mqtt_connected = false)
@@ -232,7 +232,7 @@ namespace PlanetX_IOT {
     /*
      * Check if ESP8266 successfully connected to mqtt broker
      */
-    //% block="MQTT broker is connected"
+    //% block="Courtier MQTT connecté"
     //% subcategory="MQTT" weight=24
     //% color=#EA5532
     export function isMqttBrokerConnected() {
@@ -243,7 +243,7 @@ namespace PlanetX_IOT {
      * send message
      */
     //% subcategory=MQTT weight=21
-    //% blockId=sendMQTT block="publish %msg to Topic:%topic with Qos:%qos"
+    //% blockId=sendMQTT block="Publier %msg au sujet:%topic avec niveau QoS:%qos"
     //% msg.defl=hello
     //% topic.defl=topic/1
     //% color=#EA5532
@@ -255,7 +255,7 @@ namespace PlanetX_IOT {
      * disconnect MQTT broker
      */
     //% subcategory=MQTT weight=15
-    //% blockId=breakMQTT block="Disconnect from broker"
+    //% blockId=breakMQTT block="Se déconnecter du courtier"
     //% color=#EA5532
     export function breakMQTT(): void {
         removeMsgHandler("MQTTSUBRECV")
@@ -264,7 +264,7 @@ namespace PlanetX_IOT {
         sendAT("AT+MQTTCLEAN=0", 500)
     }
 
-    //% block="when Topic: %topic have new $message with Qos: %qos"
+    //% block="Lorsque le sujet: %topic reçoit un nouveau $message avec niveau QoS: %qos"
     //% subcategory=MQTT weight=10
     //% draggableParameters
     //% topic.defl=topic/1
@@ -290,7 +290,7 @@ namespace PlanetX_IOT {
     /**
      * Connect to ThingSpeak
      */
-    //% block="connect thingspeak"
+    //% block="Connecter à ThingSpeak"
     //% write_api_key.defl=your_write_api_key
     //% subcategory="ThingSpeak" weight=90
     //% color=#EA5532
@@ -301,7 +301,7 @@ namespace PlanetX_IOT {
     /**
      * Connect to ThingSpeak and set data.
      */
-    //% block="set data to send ThingSpeak | Write API key = %write_api_key|Field 1 = %n1||Field 2 = %n2|Field 3 = %n3|Field 4 = %n4|Field 5 = %n5|Field 6 = %n6|Field 7 = %n7|Field 8 = %n8"
+    //% block="Définir données à envoyer à ThingSpeak | Ecrire clé API = %write_api_key|Champ 1 = %n1||Champ 2 = %n2|Champ 3 = %n3|Champ 4 = %n4|Champ 5 = %n5|Champ 6 = %n6|Champ 7 = %n7|Champ 8 = %n8"
     //% write_api_key.defl=your_write_api_key
     //% expandableArgumentMode="enabled"
     //% subcategory="ThingSpeak" weight=85
@@ -331,7 +331,7 @@ namespace PlanetX_IOT {
     /**
      * upload data. It would not upload anything if it failed to connect to Wifi or ThingSpeak.
      */
-    //% block="Upload data to ThingSpeak"
+    //% block="Télécharger les données vers ThingSpeak"
     //% subcategory="ThingSpeak" weight=80
     //% color=#EA5532
     export function uploadData() {
@@ -342,7 +342,7 @@ namespace PlanetX_IOT {
     /*
      * Check if ESP8266 successfully connected to ThingSpeak
      */
-    //% block="ThingSpeak connected %State"
+    //% block="ThingSpeak connecté %State"
     //% subcategory="ThingSpeak" weight=65
     //% color=#EA5532
     export function thingSpeakState(state: boolean) {
@@ -358,9 +358,9 @@ namespace PlanetX_IOT {
 namespace PlanetX_IOT {
 
     export enum SmartIotSwitchState {
-        //% block="on"
+        //% block="activé"
         on = 1,
-        //% block="off"
+        //% block="désactivé"
         off = 2
     }
 
@@ -388,7 +388,7 @@ namespace PlanetX_IOT {
      * Connect to smartiot
      */
     //% subcategory=SmartIoT weight=50
-    //% blockId=initsmartiot block="Connect SmartIoT with userToken: %userToken topic: %topic"
+    //% blockId=initsmartiot block="Se connecter à la plateforme SmartIoT en utilisant userToken: %userToken Topic: %topic"
     //% color=#EA5532
     export function connectSmartiot(userToken: string, topic: string): void {
         smartiot_token = userToken
@@ -410,7 +410,7 @@ namespace PlanetX_IOT {
      * save the data to be sent to SmartIoT
      */
     //% subcategory=SmartIoT weight=48
-    //% blockId=setSmartIotUploadData block="set data to send SmartIoT |Data 1 = %n1||Data 2 = %n2|Data 3 = %n3|Data 4 = %n4|Data 5 = %n5|Data 6 = %n6|Data 7 = %n7|Data 8 = %n8"
+    //% blockId=setSmartIotUploadData block="Configurer les données à envoyer vers la plateforme SmartIoT | Donnée 1 = %n1|| Donnée 2 = %n2| Donnée 3 = %n3| Donnée 4 = %n4| Donnée 5 = %n5| Donnée 6 = %n6| Donnée 7 = %n7| Donnée 8 = %n8"
     //% color=#EA5532
     export function setSmartIotUploadData(
         n1: number = 0,
@@ -439,7 +439,7 @@ namespace PlanetX_IOT {
      * upload data to smartiot
      */
     //% subcategory=SmartIoT weight=45
-    //% blockId=uploadSmartIotData block="Upload data %data to SmartIoT"
+    //% blockId=uploadSmartIotData block="Charger les données sur la plateforme SmartIoT"
     //% color=#EA5532
     export function uploadSmartIotData(): void {
         if (!connectSmartiot) {
@@ -453,14 +453,14 @@ namespace PlanetX_IOT {
     /*
      * Check if ESP8266 successfully connected to SmartIot
      */
-    //% block="SmartIoT connection %State"
+    //% block="État de connexion à la plateforme SmartIoT %State"
     //% subcategory=SmartIoT weight=35
     //% color=#EA5532
     export function smartiotState(state: boolean) {
         return smartiot_connected == state;
     }
 
-    //% block="When SmartIoT switch %vocabulary"
+    //% block="Lorsque l'interrupteur de la plateforme SmartIoT est %vocabulary"
     //% subcategory=SmartIoT weight=30
     //% state.fieldEditor="gridpicker" state.fieldOptions.columns=2
     //% color=#EA5532
@@ -507,7 +507,7 @@ namespace PlanetX_IOT {
      * set ifttt
      */
     //% subcategory=IFTTT weight=9
-    //% blockId=setIFTTT block="set IFTTT key:%key event:%event"
+    //% blockId=setIFTTT block="Configurer la clé IFTTT:%key événement:%event"
     //% color=#EA5532
     export function setIFTTT(key: string, event: string): void {
         iftttkey_def = key
@@ -518,7 +518,7 @@ namespace PlanetX_IOT {
      * post ifttt
      */
     //% subcategory=IFTTT weight=8
-    //% blockId=postIFTTT block="post IFTTT with|value1:%value value2:%value2 value3:%value3"
+    //% blockId=postIFTTT block="Poster à IFTTT avec|value1:%value value2:%value2 value3:%value3"
     //% color=#EA5532
     export function postIFTTT(value1: string, value2: string, value3: string): void {
         let sendST1 = "AT+HTTPCLIENT=3,1,\"http://maker.ifttt.com/trigger/" + iftttevent_def + "/with/key/" + iftttkey_def + "\",,,2,"

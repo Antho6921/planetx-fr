@@ -240,11 +240,11 @@ namespace PlanetX_Display {
      * Different modes for RGB or RGB+W NeoPixel strips
      */
     export enum NeoPixelMode {
-        //% block="RGB (GRB format)"
+        //% block="RGB (format GRB)"
         RGB = 0,
         //% block="RGB+W"
         RGBW = 1,
-        //% block="RGB (RGB format)"
+        //% block="RGB (format RGB)"
         RGB_RGB = 2
     }
     ///////////////////////////////////////////////////////RJpin_to_pin
@@ -283,7 +283,7 @@ namespace PlanetX_Display {
     /**
     * toggle led
     */
-    //% blockId=LED block="LED %Rjpin toggle to $ledstate || brightness %brightness \\%"
+    //% blockId=LED block="Basculer LED %Rjpin sur $ledstate || luminosité %brightness \%"
     //% Rjpin.fieldEditor="gridpicker" Rjpin.fieldOptions.columns=2
     //% brightness.min=0 brightness.max=100
     //% ledstate.shadow="toggleOnOff"
@@ -315,7 +315,7 @@ namespace PlanetX_Display {
         }
     }
     //% subcategory=Display group="8*16 Matrix" color=#00B1ED
-    //% blockId= matrix_refresh block="Matrix Refresh" 
+    //% blockId= matrix_refresh block="Actualiser matrice LEDs 8x16" 
     export function matrixRefresh(): void {
         if (!initializedMatrix) {
             matrixInit();
@@ -324,7 +324,7 @@ namespace PlanetX_Display {
         matrixShow();
     }
     //% subcategory=Display group="8*16 Matrix" color=#00B1ED
-    //% blockId= matrix_clear block="Matrix Clear"
+    //% blockId= matrix_clear block="Effacer matrice LEDs 8x16"
     export function matrixClear(): void {
         if (!initializedMatrix) {
             matrixInit();
@@ -338,7 +338,7 @@ namespace PlanetX_Display {
 
     //% x.min=0 x.max=15
     //% y.min=0 y.max=7
-    //% blockId= matrix_draw block="Matrix Draw|X %x|Y %y"
+    //% blockId= matrix_draw block="Matrice LEDs 8x16 allumer |X %x|Y %y"
     //% subcategory=Display group="8*16 Matrix" color=#00B1ED
     export function matrixDraw(x: number, y: number): void {
         if (!initializedMatrix) {
@@ -373,7 +373,7 @@ namespace PlanetX_Display {
 
         matrixShow();
     }
-    //% block="Matrix show emoji %ID" color=#00B1ED
+    //% block="Matrice LEDs 8x16 afficher %ID" color=#00B1ED
     //% subcategory=Display group="8*16 Matrix" 
     export function matrixEmoji(ID: EmojiList) {
         matrixClear();
@@ -432,7 +432,7 @@ namespace PlanetX_Display {
     }
     //% line.min=1 line.max=8 line.defl=1
     //% text.defl="Hello,ELECFREAKS"
-    //% block="OLED show line %line|text %text"
+    //% block="OLED ligne %line|afficher texte %text"
     //% subcategory=Display group="OLED" color=#00B1ED
     export function showUserText(line: number, text: string) {
         if (firstoledinit) {
@@ -455,7 +455,7 @@ namespace PlanetX_Display {
     }
     //% line.min=1 line.max=8 line.defl=2 
     //% n.defl=20200508
-    //% block="OLED show line %line|number %n"
+    //% block="OLED ligne %line|afficher nombre %n"
     //% subcategory=Display group="OLED" color=#00B1ED
     export function showUserNumber(line: number, n: number) {
         if (firstoledinit) {
@@ -464,7 +464,7 @@ namespace PlanetX_Display {
         }
         showUserText(line, "" + n)
     }
-    //% block="clear display" color=#00B1ED
+    //% block="OLED effacer" color=#00B1ED
     //% subcategory=Display group="OLED"
     export function oledClear() {
         //oledcmd(DISPLAY_OFF);   //display off
@@ -485,7 +485,7 @@ namespace PlanetX_Display {
    * @param clkPin value of clk pin number
    * @param dataPin value of data pin number
    */
-    //% blockId=grove_tm1637_create block="connect 4-Digit Display |pin %pin|"
+    //% blockId=grove_tm1637_create block="Afficheur 4 digits |connecté en %pin|"
     //% subcategory=Display group="7-Seg 4-Dig LED Nixietube" blockSetVariable=display color=#EA5532
     export function tm1637Create(Rjpin: DigitalRJPin, intensity: number = 7, count: number = 4): TM1637LEDs {
         let display = new TM1637LEDs();
@@ -907,7 +907,7 @@ namespace PlanetX_Display {
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="NeoPixel at pin %Rjpin|with %numleds|leds as %mode"
+    //% blockId="neopixel_create" block="NeoPixel connecté à %Rjpin|avec %numleds|LEDs en mode %mode"
     //% weight=90 color=#EA5532
     //% parts="neopixel"
     //% trackArgs=0,2
@@ -947,7 +947,7 @@ namespace PlanetX_Display {
      * @param blue value of the blue channel between 0 and 255. eg: 255
      */
     //% weight=1 subcategory=Neopixel color=#EA5532
-    //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
+    //% blockId="neopixel_rgb" block="rouge %red|vert %green|bleu %blue"
     export function rgb(red: number, green: number, blue: number): number {
         return packRGB(red, green, blue);
     }
@@ -983,7 +983,7 @@ namespace PlanetX_Display {
      * @param s saturation from 0 to 99
      * @param l luminosity from 0 to 99
      */
-    //% blockId=neopixelHSL block="hue %h|saturation %s|luminosity %l" subcategory=Neopixel color=#EA5532
+    //% blockId=neopixelHSL block="teinte %h|saturation %s|luminosité %l" subcategory=Neopixel color=#EA5532
     export function hsl(h: number, s: number, l: number): number {
         h = Math.round(h);
         s = Math.round(s);
